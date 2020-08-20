@@ -89,6 +89,31 @@ class TicTacToe
     false
   end
 
+  def full?
+    @board.all? do |f|
+      f.include?("X") || f.include?("O")
+    end
+  end
+
+  def draw?
+    if full?
+      if won? == false
+        true
+      end
+    end
+  end
+
+  def over?
+    won? || draw?
+  end
+
+
+  def winner
+    if won?
+      index = won?[0]
+      board[index]
+    end
+  end
 
 
 end
