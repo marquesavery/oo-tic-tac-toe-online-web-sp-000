@@ -1,9 +1,6 @@
 class TicTacToe
 
   attr_accessor :board
-
-  @@counter = 0
-
   WIN_COMBINATIONS = [
     [0,1,2],
     [3,4,5],
